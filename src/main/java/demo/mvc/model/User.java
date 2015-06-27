@@ -29,17 +29,14 @@ public class User implements Serializable {
     @Column(name = "USER_ID", unique = true, nullable = false)
     private Integer id;
 
+    @Column(name = "USER_STU_ID", nullable = false)
+    private String stu_id;
+    
     @Column(name = "USER_NAME", nullable = false)
     private String name;
 
     @Column(name = "USER_SCORE", nullable = false)
     private Integer score;
- //   @Column(name = "USER_EMAIL", unique = true, nullable = false, length = 64)
-//    private String email;
-
-//    @Column(name = "USER_BIRTH", nullable = false)
-//    @Temporal(TemporalType.DATE)
-//    private Date birth;
 
     @Column(name = "USER_PASSWORD", nullable = false, length = 64)
     private String password;
@@ -64,6 +61,14 @@ public class User implements Serializable {
         this.id = id;
     }
 
+    public String getStu_id() {
+        return stu_id;
+    }
+
+    public void setStu_id(String stu_id) {
+        this.stu_id = stu_id;
+    }
+    
     public String getName() {
         return name;
     }

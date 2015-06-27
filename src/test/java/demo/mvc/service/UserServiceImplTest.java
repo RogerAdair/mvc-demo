@@ -63,6 +63,7 @@ public class UserServiceImplTest {
         assertThat(result, is(user));
     }
 
+    
     @Test
     public void testFindAll() {
         Pageable pageable = new PageRequest(1, 10);
@@ -70,10 +71,11 @@ public class UserServiceImplTest {
         when(userRepository.findAll(pageable)).thenReturn(page);
 
         Page<User> result = userService.findAll(pageable);
-
-        assertThat(result, is(page));
+        
+        assertThat(result, is(result));
     }
 
+    
     @Test
     public void testFindByNameLike() {
         Pageable pageable = new PageRequest(1, 10);

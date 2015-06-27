@@ -21,6 +21,7 @@ ${request}
 		<thead>
 			<tr>
 				<th>id</th>
+				<th>stu_id</th>
 				<th>name</th>
 				<th>score</th>
 				<th>actions</th>
@@ -30,6 +31,7 @@ ${request}
 			<c:forEach var="user" items="${page.content}">
 				<tr>
 					<td>${f:h(user.id)}</td>
+					<td>${f:h(user.stu_id)}</td>
 					<td>${f:h(user.name)}</td>
 					<td>${f:h(user.score)}</td>
 					<td><form:form
@@ -45,6 +47,7 @@ ${request}
 			</c:forEach>
 		</tbody>
 	</table>
+	
 
 	<util:pagination page="${page}" query="name=${f:h(param.name)}" />
 </div>

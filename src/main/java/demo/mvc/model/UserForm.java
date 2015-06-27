@@ -41,24 +41,18 @@ public class UserForm implements Serializable {
 	@Null(groups = { UserDeleteGroup.class })
 	@NotNull(groups = { UserUpdateGroup.class, UserCreateGroup.class })
 	@Size(min = 1, max = 20)
+	private String stu_id;
+	
+	@Null(groups = { UserDeleteGroup.class })
+	@NotNull(groups = { UserUpdateGroup.class, UserCreateGroup.class })
+	@Size(min = 1, max = 20)
 	private String name;
 
 	@Null(groups = { UserDeleteGroup.class })
 	@NotNull(groups = { UserUpdateGroup.class, UserCreateGroup.class })
 	@Range(min=0,max=100)
 	private Integer score;
-/*	@Null(groups = { UserDeleteGroup.class })
-	@NotNull(groups = { UserUpdateGroup.class, UserCreateGroup.class })
-	@Size(min = 1, max = 50)
-	@Email
-	private String email;
 
-	@Null(groups = { UserDeleteGroup.class })
-	@NotNull(groups = { UserUpdateGroup.class, UserCreateGroup.class })
-	@Past
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private Date birth;
-*/
 	@Null(groups = { UserDeleteGroup.class })
 	@NotNull(groups = { UserUpdateGroup.class, UserCreateGroup.class })
 	@Size(min = 6, max = 30)
@@ -82,6 +76,14 @@ public class UserForm implements Serializable {
 		this.id = id;
 	}
 
+	public String getStu_id() {
+        return stu_id;
+    }
+
+    public void setStu_id(String stu_id) {
+        this.stu_id = stu_id;
+    }
+	
 	public String getName() {
 		return name;
 	}

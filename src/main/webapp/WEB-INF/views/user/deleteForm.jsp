@@ -5,6 +5,10 @@
 		<fieldset>
 			<legend>Delete User</legend>
 			<div class="form-group">
+				<form:label path="stu_id" class="col col-sm-2 control-label">User Stu_id</form:label>
+				<div class="col col-sm-10">${f:h(userForm.stu_id)}</div>
+			</div>
+			<div class="form-group">
 				<form:label path="name" class="col col-sm-2 control-label">User Name</form:label>
 				<div class="col col-sm-10">${f:h(userForm.name)}</div>
 			</div>

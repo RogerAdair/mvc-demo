@@ -1,7 +1,6 @@
 package demo.mvc.service;
 
 import java.util.Date;
-
 import javax.inject.Inject;
 
 import org.joda.time.DateTime;
@@ -57,6 +56,7 @@ public class UserServiceImpl implements UserService {
         return page;
     }
 
+    
     @Override
     @Transactional(readOnly = true)
     public Page<User> findByNameLike(String name, Pageable pageable) {
